@@ -151,7 +151,8 @@ def check_expiry(context: CallbackContext):
 
         days_left = (expiry_date - today).days
 
-        if days_left <= 56 and expiry_date not in notified_dates:
+        if days_left <= 30 and days_left > 0 and expiry_date not in notified_dates:
+            # Отправка уведомления
             message = f'Уведомление: {org_name} ({owner_name}) - ЭЦП истекает через {days_left} дней ({expiry_date.strftime("%d.%m.%Y")})'
             messages.append(message)
             notified_dates.append(expiry_date)
@@ -192,7 +193,7 @@ dispatcher.add_error_handler(error_handler)
 
 # Настройка планировщика
 job_queue = updater.job_queue
-job_queue.run_daily(check_expiry, time=datetime.time(hour=8, minute=0))
+job_queue.run_repeating(check_expiry, interval=datetime.timedelta(weeks=1), first=datetime.datetime.now().replace(hour=8, minute=0, second=0))
 
 # Запуск бота
 if __name__ == '__main__':
