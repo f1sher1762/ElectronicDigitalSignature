@@ -3,7 +3,9 @@ import datetime
 import logging
 import os
 from telegram import Bot
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler, CallbackContext
+from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler, CallbackContext
+from telegram.ext.filters import Filters  # Обновленный импорт
+
 
 # Настройки Telegram бота
 TOKEN = '7539124014:AAGekjZrKUuBCP8-f1nP_aKo_RgO8aNhwXg'
