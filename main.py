@@ -6,8 +6,8 @@ from telegram import Bot
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler, CallbackContext
 
 # Настройки Telegram бота
-TOKEN = '7255303353:AAFdalVersf5QJgGzjcl95J_YcqWXbNbfjY'
-CHAT_ID = '-4253009996'
+TOKEN = '7539124014:AAGekjZrKUuBCP8-f1nP_aKo_RgO8aNhwXg'
+CHAT_ID = '-4509208587'
 ALLOWED_USERS = [376492213]  # Замените на реальные идентификаторы пользователей
 
 # Создаем объект бота
