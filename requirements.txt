@@ -1,4 +1,4 @@
 pandas
-python-telegram-bot
 openpyxl
+python-telegram-bot==12.0.0
 
