@@ -15,7 +15,7 @@ bot = Bot(token=TOKEN)
 
 # Чтение Excel файла и преобразование столбца в формат datetime
 df = pd.read_excel('ecp_expiry_dates.xlsx')
-df['Дата окончания ЭЦП'] = pd.to_datetime(df['Дата окончания ЭЦП'], format='%d.%m.%Y', errors='coerce')
+df['дата окончания ЭЦП'] = pd.to_datetime(df['Дата окончания ЭЦП'], format='%d.%m.%Y', errors='coerce')
 
 # Текущая дата
 today = datetime.datetime.today()
