@@ -4,18 +4,18 @@ import logging
 import os
 from telegram import Bot
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler, CallbackContext
-from telegram.ext.filters import Filters  # Обновленный импорт
+from telegram.ext.filters import Filters  
 
 
-# Настройки Telegram бота
+# Настройки Telegram ботика
 TOKEN = '7539124014:AAGekjZrKUuBCP8-f1nP_aKo_RgO8aNhwXg'
 CHAT_ID = '-4509208587'
 ALLOWED_USERS = [376492213]  # Замените на реальные идентификаторы пользователей
 
-# Создаем объект бота
+# Создаем объект ботика
 bot = Bot(token=TOKEN)
 
-# Чтение Excel файла и преобразование столбца в формат datetime
+# Чтение Excel файлика и преобразование столбца в формат datetime
 df = pd.read_excel('ecp_expiry_dates.xlsx')
 df['дата окончания ЭЦП'] = pd.to_datetime(df['Дата окончания ЭЦП'], format='%d.%m.%Y', errors='coerce')
 
