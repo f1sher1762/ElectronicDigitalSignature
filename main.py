@@ -8,9 +8,9 @@ from telegram.ext.filters import Filters
 
 
 # Настройки Telegram ботика
-TOKEN = '7539124014:AAGekjZrKUuBCP8-f1nP_aKo_RgO8aNhwXg'
-CHAT_ID = '-4509208587'
-ALLOWED_USERS = [376492213]  # Замените на реальные идентификаторы пользователей
+TOKEN = 'токен'
+CHAT_ID = '-айди чатика'
+ALLOWED_USERS = [разрешенные юзеры] 
 
 # Создаем объект ботика
 bot = Bot(token=TOKEN)
